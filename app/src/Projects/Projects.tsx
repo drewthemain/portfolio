@@ -8,8 +8,8 @@ import { Typography } from "@mui/material"
 
 const WelcomeMessage = styled(Typography)`
     color: ${colors.white};
-    margin: 3vw;
-    font-weight: bold;
+    margin-top: 8%;
+    margin-bottom: 3%;
 `
 
 const MainContainer = styled('div')`
@@ -23,13 +23,13 @@ const Divider = styled('hr')`
 const ProjectsHolder = styled('div')`
     display: grid;
     width: 100%;
-    height: 90vh;
+    height: 60vh;
     grid-template-columns: 30vw 30vw;
     grid-gap: 15%;
     grid-template-rows: 50vh;
     grid-auto-rows: 50vh;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 5%;
 
     @media (max-width: 900px) {
         grid-gap: 5%;
@@ -56,8 +56,7 @@ export default function Projects() {
 
     return (
         <MainContainer>
-            <WelcomeMessage variant="h5">Hello, I'm Drew White!</WelcomeMessage>
-            <WelcomeMessage variant="h6">Below are several projects I've worked on from React development (including this portfolio) to AI in game development. Read on!</WelcomeMessage>
+            <WelcomeMessage variant="h5">Below are several projects I've worked on from React development <i>(including this portfolio)</i> to AI in game development. Thanks for visiting!</WelcomeMessage>
             <Divider />
             <ProjectsHolder>
                 {setupProjects()}

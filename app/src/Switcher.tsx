@@ -10,8 +10,16 @@ const SwitcherContainer = styled("div")`
     align-items: center;
     background-color: ${colors.raisin};
     padding: 0;
-    margin-top: 14vh;
+    margin-top: 10vh;
     height: fit-content;
+
+    @media (max-width: 1185px) {
+        margin-top: 13vh;
+    }
+
+    @media (max-width: 690px) {
+        margin-top: 19vh;
+    }
 `;
 
 /**

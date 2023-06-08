@@ -52,6 +52,11 @@ const HeaderText = styled(Typography)`
   color: ${colors.white};
   font-size: 200%;
   font-weight: bold;
+
+  &:hover {
+    color: ${colors.red};
+    transition: 0.2s;
+  }
 `;
 
 // The various header button options with it's corresponding path
