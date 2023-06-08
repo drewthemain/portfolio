@@ -9,9 +9,9 @@ const SwitcherContainer = styled("div")`
     justify-content: center;
     align-items: center;
     background-color: ${colors.raisin};
-    margin: 0;
     padding: 0;
-    margin-top: 7%;
+    margin-top: 14vh;
+    height: fit-content;
 `;
 
 /**
