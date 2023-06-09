@@ -72,7 +72,7 @@ const ProjectSpace = ({descriptor} : ProjectSpaceProps) => {
     };
 
     const onClick = () => {
-        navigate(`/resume`);
+        navigate(`/project/${descriptor.id}`);
     };
 
     return (

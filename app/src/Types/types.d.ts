@@ -3,5 +3,14 @@ export type ProjectDescriptor = {
     thumbnail: string,
     date: string,
     description: string,
-    skills: string
+    skills: string,
+    id: string
+}
+
+export type ProjectData = {
+    body : string,
+    imageOne : string,
+    imageTwo : string,
+    imageThree : string,
+    link : string
 }

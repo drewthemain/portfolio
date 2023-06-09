@@ -3,7 +3,7 @@ import { colors } from "../Style/colors"
 import ProjectSpace from "./ProjectSpace"
 import { ProjectDescriptor } from "../Types/types.d"
 import { useState, useEffect } from "react"
-import projects from "./ProjectData"
+import { overviews } from "./ProjectData"
 import { Typography } from "@mui/material"
 import About from "../About"
 import Skills from "../Skills"
@@ -48,7 +48,7 @@ export default function Projects() {
     const [ Projects, setProjects ] = useState<ProjectDescriptor[]>([]);
 
     useEffect(() => {
-        setProjects(projects);
+        setProjects(overviews);
     }, [])
 
     const setupProjects = () => {

@@ -117,10 +117,19 @@ const Header = ({scroll} : HeaderProps) => {
               {...{
                 key: label,
                 onClick: () => {
-                  navigate(`/${location}`);
+                  if (label === "Resume") {
+                    window.open(`${window.location.origin.toString()}/ResumeDWCompSci.pdf`);
+                  }
+                  else if (label === "Linkedin") {
+                    window.open("https://www.linkedin.com/in/drew-white-833797193/");
+                  }
+                  else {
+                    navigate(`/${location}`);
+                  }
                 }
               }
             }
+            
             >
               {label}
             </HeaderButton>
