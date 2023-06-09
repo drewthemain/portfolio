@@ -7,16 +7,17 @@ const SkillsContainer = styled('div')`
     background-color: ${colors.onyx};
     margin-bottom: 3%;
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 100%;
-    grid-gap: 5%;
+    grid-gap: 3%;
     justify-items: center;
     align-items: center;
+    overflow-x: hidden;
 `
 
 const SkillsImage = styled('img')`
-    width: 55%;
-    height: 55%;
+    width: 50%;
+    height: 50%;
 
     min-width: 20px;
     min-height: 20px;

@@ -138,7 +138,7 @@ const Header = ({scroll} : HeaderProps) => {
 
     const welcomeMessage = (
         <HeaderText variant="caption">
-          Drew White - Computer Science
+          Drew White - Developer
         </HeaderText>
     );
 

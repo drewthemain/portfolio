@@ -33,6 +33,8 @@ const ProjectsHolder = styled('div')`
     grid-auto-rows: 50vh;
     justify-content: center;
     margin-top: 5%;
+    width: 100%;
+    height: 100%;
 
     @media (max-width: 900px) {
         grid-gap: 5%;

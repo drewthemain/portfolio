@@ -3,6 +3,7 @@ import { colors } from "../Style/colors";
 import { ProjectDescriptor } from "../Types/types";
 import { Typography } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Space = styled('div')`
     display: flex;
@@ -14,6 +15,8 @@ const Space = styled('div')`
     overflow: hidden;
     overflow-wrap: break-word;
     min-width: 200px;
+    width: 100%;
+    height: 100%;
 `
 
 const SpaceImage = styled('img')`
@@ -21,7 +24,7 @@ const SpaceImage = styled('img')`
     flex-shrink: 0;
     object-fit: cover;
     &:hover {
-        filter: brightness(50%);
+        filter: brightness(20%);
         transition: 0.3s;
     }
 `
@@ -29,12 +32,27 @@ const SpaceImage = styled('img')`
 const DescriptionContainer = styled('div')`
     align-text: center;
     position: absolute;
+    width: 25vw;
+    pointer-events: none;
 `
 
 const ImageHeader = styled(Typography)`
-    color: ${colors.white};
+    color: ${colors.red};
     margin-top: 5vh;
-    
+    font-weight: bold;
+    font-size: 2vw;
+`
+
+const ImageDescription = styled(Typography)`
+    color: ${colors.white};
+    margin-top: 5%;
+    font-weight: bold;
+`
+
+const ImageDate = styled(Typography)`
+    color: ${colors.white};
+    margin-top: 5%;
+    font-style: italic;
 `
 
 type ProjectSpaceProps = {
@@ -43,6 +61,7 @@ type ProjectSpaceProps = {
 
 const ProjectSpace = ({descriptor} : ProjectSpaceProps) => {
     const [hover, setHover] = useState(false);
+    const navigate = useNavigate();
 
     const onHover = () => {
         setHover(true);
@@ -52,15 +71,25 @@ const ProjectSpace = ({descriptor} : ProjectSpaceProps) => {
         setHover(false);
     };
 
+    const onClick = () => {
+        navigate(`/resume`);
+    };
+
     return (
         <Space
             onMouseEnter={onHover}
             onMouseLeave={onLeave}
+            onClick={onClick}
         >
             <SpaceImage src={require(`../../images/${descriptor.thumbnail}`)} alt="project thumbnail"/>
             {hover ? 
                 <DescriptionContainer>
-                    <ImageHeader variant="h5">{descriptor.title}</ImageHeader>
+                    <ImageHeader variant="h4">{descriptor.title}</ImageHeader>
+                    <ImageDate variant="h6">{descriptor.date}</ImageDate>
+                    <ImageDescription variant="body1">{descriptor.description}</ImageDescription>
+                    <ImageDescription variant="body2">Skills: {descriptor.skills}</ImageDescription>
+                    <br></br>
+                    <ImageDate variant="h6">Click to learn more!</ImageDate>
                 </DescriptionContainer>
             : ""}
         </Space>

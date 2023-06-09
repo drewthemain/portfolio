@@ -7,7 +7,8 @@ const FooterWrapper = styled('div')`
     height: fit-content;
     width: 100%;
     text-align: center;
-    padding: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 `
 
 const FooterText = styled(Typography)`
