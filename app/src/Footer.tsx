@@ -18,6 +18,10 @@ const ContactHolder = styled('div')`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a {
+        color: ${colors.red};
+    }
 `
 
 const ContactList = styled('ul')`

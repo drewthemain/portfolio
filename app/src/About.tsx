@@ -7,7 +7,6 @@ const AboutContainer = styled('div')`
     height: fit-content;
     min-height: 10vh;
     background-color: ${colors.metal};
-    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +39,10 @@ const MainHeader = styled(Typography)`
     color: ${colors.white};
     font-weight: bold;
     margin-bottom: 3%;
+
+    a {
+        color: ${colors.red};
+    }
 `
 
 export default function About() {
@@ -47,13 +50,13 @@ export default function About() {
     return (
         <AboutContainer>
             <ImageContainer>
-                <MainImage src={require(`./me.jpg`)} />
+                <MainImage src={require(`./images/me.jpg`)} />
             </ImageContainer>
             <DescriptionContainer>
                 <MainHeader variant="h4">Hello! I'm Drew White.</MainHeader>
                 <MainHeader>I'm a recent Michigan State University graduate with a degree in Computer Science and a minor in Game Development. The merge of technology and creativity is my passion, ranging from web development to systems programming in games.</MainHeader>
                 <br></br>
-                <MainHeader>During my time at MSU, I was involved in several organizations based around development and was even able to serve as programming director on a student-run group I helped create, Spartasoft Studio. My internship experience at West Monroe Partners gave me further experience with full-stack development including React/Node/PostGreSQL. I am always eager to learn and willing to dive into new opportunities!</MainHeader>
+                <MainHeader>During my time at MSU, I was involved in several organizations based around development and was even able to serve as programming director on a student-run group I helped create, <a href="https://spartasoftstudio.itch.io/">Spartasoft Studio</a>. My internship experience at <a href="https://www.westmonroe.com/">West Monroe Partners</a> gave me further experience with full-stack development including React/Node/PostGreSQL. I am always eager to learn and willing to dive into new opportunities!</MainHeader>
             </DescriptionContainer>
         </AboutContainer>
     )

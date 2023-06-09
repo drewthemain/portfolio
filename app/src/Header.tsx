@@ -77,10 +77,6 @@ const headerOptions = [
 
     },
     {
-      label: "About Me",
-      location: "aboutme",
-    },
-    {
       label: "Resume",
       location: "resume",
     },

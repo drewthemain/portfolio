@@ -6,10 +6,12 @@ import { useState, useEffect } from "react"
 import projects from "./ProjectData"
 import { Typography } from "@mui/material"
 import About from "../About"
+import Skills from "../Skills"
 
 const WelcomeMessage = styled(Typography)`
     color: ${colors.white};
     margin-bottom: 3%;
+    font-weight: bold;
 `
 
 const MainContainer = styled('div')`
@@ -58,7 +60,8 @@ export default function Projects() {
     return (
         <MainContainer>
             <About />
-            <WelcomeMessage variant="h5">Below are several projects I've worked on from React development <i>(including this portfolio)</i> to AI in game development. Thanks for visiting!</WelcomeMessage>
+            <Skills />
+            <WelcomeMessage variant="h5">Below are a few projects I've worked on from React development <i>(including this portfolio)</i> to AI in game development. Thanks for visiting!</WelcomeMessage>
             <Divider />
             <ProjectsHolder>
                 {setupProjects()}
