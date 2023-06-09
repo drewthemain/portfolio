@@ -72,7 +72,7 @@ const HeaderText = styled(Typography)`
 // The various header button options with it's corresponding path
 const headerOptions = [
     {
-      label: "Projects",
+      label: "Home",
       location: "projects",
 
     },

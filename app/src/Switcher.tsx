@@ -2,6 +2,7 @@ import { Route, Routes} from 'react-router-dom';
 import styled from "@emotion/styled";
 import Projects from './Projects/Projects';
 import { colors } from "./Style/colors"
+import Resume from './Resume';
 
 // Helps orient the switcher so all windows are properly spaced
 const SwitcherContainer = styled("div")`
@@ -32,6 +33,8 @@ export default function Switcher() {
 
                 {/* Route for linking to projects page */}
                 <Route path="projects" element={<Projects />} />
+
+                <Route path="resume" element={<Resume />}/>
             </Routes>
         </SwitcherContainer>
     );
