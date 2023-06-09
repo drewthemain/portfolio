@@ -5,15 +5,18 @@ import { ProjectDescriptor } from "../Types/types.d"
 import { useState, useEffect } from "react"
 import projects from "./ProjectData"
 import { Typography } from "@mui/material"
+import About from "../About"
 
 const WelcomeMessage = styled(Typography)`
     color: ${colors.white};
-    margin-top: 8%;
     margin-bottom: 3%;
 `
 
 const MainContainer = styled('div')`
     text-align: center;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3%;
 `
 
 const Divider = styled('hr')`
@@ -22,8 +25,6 @@ const Divider = styled('hr')`
 
 const ProjectsHolder = styled('div')`
     display: grid;
-    width: 100%;
-    height: 60vh;
     grid-template-columns: 30vw 30vw;
     grid-gap: 15%;
     grid-template-rows: 50vh;
@@ -56,6 +57,7 @@ export default function Projects() {
 
     return (
         <MainContainer>
+            <About />
             <WelcomeMessage variant="h5">Below are several projects I've worked on from React development <i>(including this portfolio)</i> to AI in game development. Thanks for visiting!</WelcomeMessage>
             <Divider />
             <ProjectsHolder>

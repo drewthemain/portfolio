@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
 import { colors } from "./Style/colors";
 import { css, keyframes } from "@emotion/react";
+import { useEffect, useState } from 'react'
+
+const SCROLL_LIMIT = 60;
 
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {
@@ -25,20 +28,27 @@ const bounce = keyframes`
 // Describes the app header
 const MainHeader = styled(AppBar)`
     background: ${colors.black};
+    position: sticky;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
 `;
 
 // Container for the full header bar
 const HeaderContainer = styled(Toolbar)`
-    text-align: left;
     display: flex;
     justify-content: space-between;
-    margin: 2% 5%;
+    width: 90%;
+    height: 100%;
 `;
 
 // Describes each individual header button
 const HeaderButton = styled(Button)`
     font-weight: bold;
-    font-size: 100%;
+    font-size: 1vw;
     margin-left: 2vw;
     color: ${colors.red};
     &:hover {
@@ -50,7 +60,7 @@ const HeaderButton = styled(Button)`
 // Describes the text for the header message
 const HeaderText = styled(Typography)`
   color: ${colors.white};
-  font-size: 200%;
+  font-size: 2vw;
   font-weight: bold;
 
   &:hover {
@@ -80,12 +90,28 @@ const headerOptions = [
     }
   ];
 
+type HeaderProps = {
+    scroll : number;
+}
+
 /**
  * Acts as the static header at the top of the site
  * @returns the header bar properly displayed
  */
-export default function Header() {
+const Header = ({scroll} : HeaderProps) => {
     const navigate = useNavigate();
+
+    const [scrolled, setScrolled] = useState(false);
+    
+    useEffect(() => {
+      console.log(scroll)
+      if (scroll >= SCROLL_LIMIT && !scrolled) {
+        setScrolled(true);
+      }
+      else if (scroll < 1 && scrolled) {
+        setScrolled(false);
+      }
+  }, [scroll])
 
     // Maps buttons to the proper values in headerOptions
     const getMenuButtons = () => {
@@ -122,8 +148,10 @@ export default function Header() {
 
 
     return (
-        <header>
-            <MainHeader>{displayWelcome()}</MainHeader>
-        </header>
+      <MainHeader style={{height: scrolled ? "5vh" : "13vh", transition: "0.5s", transitionProperty: "height"}}>
+        {displayWelcome()}
+      </MainHeader>
     );
 }
+
+export default Header;

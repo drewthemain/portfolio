@@ -19,7 +19,7 @@ const Space = styled('div')`
 const SpaceImage = styled('img')`
     position: relative;
     flex-shrink: 0;
-    objecvt-fit: cover;
+    object-fit: cover;
     &:hover {
         filter: brightness(50%);
         transition: 0.3s;
