@@ -107,23 +107,29 @@ const Project = () => {
 
     return (
         <TopContainer>
+            {/* Don't display until loading is complete */}
             {loading && <EmptyContainer />}
+
             {!loading && 
                 <ProjectContainer>
+
                     <BackgroundTop>
                         <ProjectHeader variant="h2">{overview?.title}</ProjectHeader>
                     </BackgroundTop>
+
                     <BackgroundMiddle>
                         <Detail variant="body1">Project Length: {project?.length}</Detail>
                         <Detail variant="body1">Tools: {overview?.skills}</Detail>
                         <Detail variant="body1">Team Size: {project?.size}</Detail>
                         <Detail variant="body1">Link: <a href={project?.link} target="_blank" rel="noreferrer">{overview?.title}</a></Detail>
                     </BackgroundMiddle>
+
                     <DescriptionContainer>
                         <ParagraphText variant="body1">{project?.paragraphOne}</ParagraphText>
                         <br /><br />
                         <ParagraphText>{project?.paragraphTwo}</ParagraphText>
                     </DescriptionContainer>
+
                     <ImageGrid>
                         {project?.imageOne.path !== "" ? <Image src={require(`../../images/${project?.imageOne.path}`)} alt={project?.imageOne.alt}></Image> : <div />}
                         {project?.imageTwo.path !== "" ? <Image src={require(`../../images/${project?.imageTwo.path}`)} alt={project?.imageTwo.alt}></Image> : <div />}
@@ -138,6 +144,7 @@ const Project = () => {
                             <Detail variant="body2">{project?.imageThree.description}</Detail>
                         </ImageDescription>
                     </ImageGrid>
+                    
                 </ProjectContainer>}
         </TopContainer>
     )

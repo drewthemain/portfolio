@@ -86,6 +86,7 @@ const ProjectSpace = ({descriptor} : ProjectSpaceProps) => {
             onClick={onClick}
         >
             <SpaceImage src={require(`../../images/${descriptor.thumbnail}`)} alt="project thumbnail"/>
+            {/* Only on hover show the text */}
             {hover ? 
                 <DescriptionContainer>
                     <ImageHeader variant="h4">{descriptor.title}</ImageHeader>

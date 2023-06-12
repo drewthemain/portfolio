@@ -52,6 +52,7 @@ export default function Projects() {
         setProjects(overviews);
     }, [])
 
+    // Maps each overview to a project space for grid display
     const setupProjects = () => {
         return Projects.map(( data : ProjectDescriptor) => {
             return (

@@ -34,7 +34,7 @@ export default function Footer() {
                 </FooterText>
             </ContactHolder>
             <FooterText style={{ color: colors.red, fontWeight: "bold"}} variant="body1">
-                Drew White 2023
+                Website Created By Drew White - 2023
             </FooterText>
         </FooterWrapper>
     )
