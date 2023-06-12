@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import { colors } from "./Style/colors"
 
+// Holds the overall skills grid
 const SkillsContainer = styled('div')`
     width: 100%;
     height: 20vh;
@@ -15,6 +16,7 @@ const SkillsContainer = styled('div')`
     overflow-x: hidden;
 `
 
+// Sets size for each skill image
 const SkillsImage = styled('img')`
     width: 5vw;
     height: 5vw;

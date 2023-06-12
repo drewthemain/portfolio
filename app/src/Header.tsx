@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
 import { colors } from "./Style/colors";
-import { css, keyframes } from "@emotion/react";
+import { keyframes } from "@emotion/react";
 import { useEffect, useState } from 'react'
 
 const SCROLL_LIMIT = 60;
@@ -110,7 +110,7 @@ const Header = ({scroll} : HeaderProps) => {
       else if (scroll < 1 && scrolled) {
         setScrolled(false);
       }
-  }, [scroll])
+  }, [scroll, scrolled])
 
     // Maps buttons to the proper values in headerOptions
     const getMenuButtons = () => {
@@ -119,6 +119,7 @@ const Header = ({scroll} : HeaderProps) => {
             <HeaderButton
               {...{
                 key: label,
+                // Sets OnClick based on which option was selected
                 onClick: () => {
                   if (label === "Resume") {
                     window.open(`${window.location.origin.toString()}/ResumeDWCompSci.pdf`);

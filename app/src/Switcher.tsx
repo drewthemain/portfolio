@@ -28,6 +28,7 @@ export default function Switcher() {
                 {/* Route for linking to projects page */}
                 <Route path="projects" element={<Projects />} />
 
+                {/* Route for linking to a specific project */}
                 <Route path="project/:id" element={<Project />} />
                 
             </Routes>

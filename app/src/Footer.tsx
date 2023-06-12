@@ -25,10 +25,6 @@ const ContactHolder = styled('div')`
     }
 `
 
-const ContactList = styled('ul')`
-    color: ${colors.white};
-`
-
 export default function Footer() {
     return (
         <FooterWrapper>

@@ -10,7 +10,6 @@ const TopContainer = styled('div')`
     justify-content: center;
 `
 
-
 const EmptyContainer = styled('div')`
     width: 100%;
     height: 100vh;
@@ -42,11 +41,11 @@ const BackgroundTop = styled('div')`
 `
 
 const BackgroundMiddle = styled('div')`
-width: 100%;
-height: fit-content;
-background-color: ${colors.black};
-display: flex;
-justify-content: center;
+    width: 100%;
+    height: fit-content;
+    background-color: ${colors.black};
+    display: flex;
+    justify-content: center;
 `
 
 const ImageGrid = styled('div')`
@@ -102,6 +101,7 @@ const Detail = styled(Typography)`
 `
 
 const Project = () => {
+    // Uses custom hook for grabbing the correct project from the id
     const {loading, project, overview} = useProject();
 
     return (
@@ -116,7 +116,7 @@ const Project = () => {
                         <Detail variant="body1">Project Length: {project?.length}</Detail>
                         <Detail variant="body1">Tools: {overview?.skills}</Detail>
                         <Detail variant="body1">Team Size: {project?.size}</Detail>
-                        <Detail variant="body1">Link: <a href={project?.link} target="_blank">{overview?.title}</a></Detail>
+                        <Detail variant="body1">Link: <a href={project?.link} target="_blank" rel="noreferrer">{overview?.title}</a></Detail>
                     </BackgroundMiddle>
                     <DescriptionContainer>
                         <ParagraphText variant="body1">{project?.paragraphOne}</ParagraphText>
@@ -124,9 +124,9 @@ const Project = () => {
                         <ParagraphText>{project?.paragraphTwo}</ParagraphText>
                     </DescriptionContainer>
                     <ImageGrid>
-                        {project?.imageOne.path != "" ? <Image src={require(`../../images/${project?.imageOne.path}`)} alt={project?.imageOne.alt}></Image> : <div />}
-                        {project?.imageTwo.path != "" ? <Image src={require(`../../images/${project?.imageTwo.path}`)} alt={project?.imageTwo.alt}></Image> : <div />}
-                        {project?.imageThree.path != "" ? <Image src={require(`../../images/${project?.imageThree.path}`)} alt={project?.imageThree.alt}></Image> : <div />}
+                        {project?.imageOne.path !== "" ? <Image src={require(`../../images/${project?.imageOne.path}`)} alt={project?.imageOne.alt}></Image> : <div />}
+                        {project?.imageTwo.path !== "" ? <Image src={require(`../../images/${project?.imageTwo.path}`)} alt={project?.imageTwo.alt}></Image> : <div />}
+                        {project?.imageThree.path !== "" ? <Image src={require(`../../images/${project?.imageThree.path}`)} alt={project?.imageThree.alt}></Image> : <div />}
                         <ImageDescription>
                             <Detail variant="body2">{project?.imageOne.description}</Detail>
                         </ImageDescription>
