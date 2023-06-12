@@ -160,7 +160,7 @@ const Header = ({scroll} : HeaderProps) => {
 
 
     return (
-      <MainHeader style={{height: scrolled ? "5vh" : "13vh", transition: "0.5s", transitionProperty: "height"}}>
+      <MainHeader style={{height: scrolled ? "3vw" : "7vw", transition: "0.5s", transitionProperty: "height"}}>
         {displayWelcome()}
       </MainHeader>
     );

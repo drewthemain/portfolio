@@ -8,6 +8,7 @@ const TopContainer = styled('div')`
     height: fit-content;
     display: flex;
     justify-content: center;
+    min-height: 80vh;
 `
 
 const EmptyContainer = styled('div')`
@@ -21,7 +22,6 @@ const ProjectContainer = styled('div')`
     align-items: center;
     height: fit-content;
     width: 90%;
-    min-height: 100vh;
     margin: 2%;
     background-color: ${colors.metal};
     border-radius: 20px;
@@ -52,7 +52,7 @@ const BackgroundMiddle = styled('div')`
 const ImageGrid = styled('div')`
     display: grid;
     width: 100%;
-    height: 50vh;
+    height: 20vw;
     grid-template-columns: 30% 30% 30%;
     grid-template-rows: 80% 20%;
     grid-gap: 3%;

@@ -4,7 +4,7 @@ import { colors } from "./Style/colors"
 // Holds the overall skills grid
 const SkillsContainer = styled('div')`
     width: 100%;
-    height: 20vh;
+    height: 10vw;
     background-color: ${colors.onyx};
     margin-bottom: 3%;
     display: grid;

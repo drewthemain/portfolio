@@ -19,6 +19,7 @@ const MainContainer = styled('div')`
     width: 100%;
     height: fit-content;
     margin-bottom: 3%;
+    min-height: 80vh;
 `
 
 const Divider = styled('hr')`
