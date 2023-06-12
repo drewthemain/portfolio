@@ -21,14 +21,14 @@ const overviews : ProjectDescriptor[] = [
 
 const projects : ProjectData[] = [
     {
-        body: "",
+        body: "Project Local Body",
         imageOne: "",
         imageTwo: "",
         imageThree: "",
         link: ""
     },
     {
-        body: "",
+        body: "No Honor Among Thieves Body",
         imageOne: "",
         imageTwo: "",
         imageThree: "",

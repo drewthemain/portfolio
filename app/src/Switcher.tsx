@@ -2,7 +2,7 @@ import { Route, Routes} from 'react-router-dom';
 import styled from "@emotion/styled";
 import Projects from './Projects/Projects';
 import { colors } from "./Style/colors"
-import Project from './Project';
+import Project from './Projects/Project';
 
 // Helps orient the switcher so all windows are properly spaced
 const SwitcherContainer = styled("div")`

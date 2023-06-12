@@ -100,7 +100,6 @@ const Header = ({scroll} : HeaderProps) => {
     const [scrolled, setScrolled] = useState(false);
     
     useEffect(() => {
-      console.log(scroll)
       if (scroll >= SCROLL_LIMIT && !scrolled) {
         setScrolled(true);
       }
