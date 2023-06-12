@@ -29,8 +29,8 @@ const ProjectsHolder = styled('div')`
     display: grid;
     grid-template-columns: 30vw 30vw;
     grid-gap: 15%;
-    grid-template-rows: 50vh;
-    grid-auto-rows: 50vh;
+    grid-template-rows: 30vw;
+    grid-auto-rows: 30vw;
     justify-content: center;
     margin-top: 5%;
     width: 100%;
@@ -38,9 +38,10 @@ const ProjectsHolder = styled('div')`
 
     @media (max-width: 900px) {
         grid-gap: 5%;
-        grid-template-columns: 50vh;
-        margin-top: 15%;
-        height: 120vh;
+        grid-template-columns: 30vw;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: fit-content;
     }
 `
 

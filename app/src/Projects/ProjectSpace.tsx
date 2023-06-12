@@ -29,9 +29,13 @@ const SpaceImage = styled('img')`
 
 const DescriptionContainer = styled('div')`
     align-text: center;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     width: 25vw;
     pointer-events: none;
+    display: flex;
+    flex-direction: column;
 `
 
 const ImageHeader = styled(Typography)`
@@ -39,31 +43,20 @@ const ImageHeader = styled(Typography)`
     margin-top: 5vh;
     font-weight: bold;
     font-size: 2vw;
-
-    @media (max-width: 900px) {
-        font-size: 5vw;
-    }
 `
 
 const ImageDescription = styled(Typography)`
     color: ${colors.white};
     margin-top: 5%;
     font-weight: bold;
+    font-size: 1vw;
 `
 
 const ImageDate = styled(Typography)`
     color: ${colors.white};
     margin-top: 5%;
     font-style: italic;
-`
-
-const DescriptionCheck = styled('div')`
-    width: 100%;
-    height: 100%;
-
-    @media (max-width: 900px) {
-        display: none;
-    }
+    font-size: 1vw;
 `
 
 type ProjectSpaceProps = {
@@ -96,13 +89,11 @@ const ProjectSpace = ({descriptor} : ProjectSpaceProps) => {
             {hover ? 
                 <DescriptionContainer>
                     <ImageHeader variant="h4">{descriptor.title}</ImageHeader>
-                    <DescriptionCheck>
-                        <ImageDate variant="h6">{descriptor.date}</ImageDate>
-                        <ImageDescription variant="body1">{descriptor.description}</ImageDescription>
-                        <ImageDescription variant="body2">Skills: {descriptor.skills}</ImageDescription>
-                        <br></br>
-                        <ImageDate variant="h6">Click to learn more!</ImageDate>
-                    </DescriptionCheck>
+                    <ImageDate variant="h6">{descriptor.date}</ImageDate>
+                    <ImageDescription variant="body1">{descriptor.description}</ImageDescription>
+                    <ImageDescription variant="body2">Skills: {descriptor.skills}</ImageDescription>
+                    <br></br>
+                    <ImageDate variant="h6">Click to learn more!</ImageDate>
                 </DescriptionContainer>
             : ""}
         </Space>

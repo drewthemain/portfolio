@@ -25,6 +25,7 @@ const ProjectContainer = styled('div')`
     margin: 2%;
     background-color: ${colors.metal};
     border-radius: 20px;
+    padding-bottom: 2%;
 
     @media (max-width: 900px) {
         padding-bottom: 5%;
