@@ -15,8 +15,6 @@ const Space = styled('div')`
     overflow: hidden;
     overflow-wrap: break-word;
     min-width: 200px;
-    width: 100%;
-    height: 100%;
 `
 
 const SpaceImage = styled('img')`
@@ -41,6 +39,10 @@ const ImageHeader = styled(Typography)`
     margin-top: 5vh;
     font-weight: bold;
     font-size: 2vw;
+
+    @media (max-width: 900px) {
+        font-size: 5vw;
+    }
 `
 
 const ImageDescription = styled(Typography)`
@@ -53,6 +55,15 @@ const ImageDate = styled(Typography)`
     color: ${colors.white};
     margin-top: 5%;
     font-style: italic;
+`
+
+const DescriptionCheck = styled('div')`
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 `
 
 type ProjectSpaceProps = {
@@ -85,11 +96,13 @@ const ProjectSpace = ({descriptor} : ProjectSpaceProps) => {
             {hover ? 
                 <DescriptionContainer>
                     <ImageHeader variant="h4">{descriptor.title}</ImageHeader>
-                    <ImageDate variant="h6">{descriptor.date}</ImageDate>
-                    <ImageDescription variant="body1">{descriptor.description}</ImageDescription>
-                    <ImageDescription variant="body2">Skills: {descriptor.skills}</ImageDescription>
-                    <br></br>
-                    <ImageDate variant="h6">Click to learn more!</ImageDate>
+                    <DescriptionCheck>
+                        <ImageDate variant="h6">{descriptor.date}</ImageDate>
+                        <ImageDescription variant="body1">{descriptor.description}</ImageDescription>
+                        <ImageDescription variant="body2">Skills: {descriptor.skills}</ImageDescription>
+                        <br></br>
+                        <ImageDate variant="h6">Click to learn more!</ImageDate>
+                    </DescriptionCheck>
                 </DescriptionContainer>
             : ""}
         </Space>

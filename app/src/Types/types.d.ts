@@ -8,9 +8,18 @@ export type ProjectDescriptor = {
 }
 
 export type ProjectData = {
-    body : string,
-    imageOne : string,
-    imageTwo : string,
-    imageThree : string,
+    paragraphOne: string,
+    paragraphTwo: string,
+    length: string,
+    size: string,
+    imageOne : Image,
+    imageTwo : Image,
+    imageThree : Image,
     link : string
+}
+
+export type Image = {
+    path: string,
+    description: string,
+    alt: string
 }
