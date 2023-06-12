@@ -83,6 +83,10 @@ const headerOptions = [
     {
       label: "Linkedin",
       location: "linkedin",
+    },
+    {
+      label: "Github",
+      location: "github",
     }
   ];
 
@@ -121,6 +125,9 @@ const Header = ({scroll} : HeaderProps) => {
                   }
                   else if (label === "Linkedin") {
                     window.open("https://www.linkedin.com/in/drew-white-833797193/");
+                  }
+                  else if (label === "Github") {
+                    window.open("https://github.com/drewthemain?tab=repositories");
                   }
                   else {
                     navigate(`/${location}`);
