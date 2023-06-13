@@ -56,7 +56,7 @@ export default function About() {
                 <MainHeader variant="h4">Hello! I'm Drew White.</MainHeader>
                 <MainHeader>I'm a recent Michigan State University graduate with a degree in Computer Science and a minor in <a href="https://drewthemain.github.io/" target="_blank" rel="noreferrer">Game Development</a>. The merge of technology and creativity is my passion, ranging from web development to systems programming in games.</MainHeader>
                 <br></br>
-                <MainHeader>During my time at MSU, I was involved in several organizations based around development and was even able to serve as programming director on a student-run group I helped create, <a href="https://spartasoftstudio.itch.io/" target="_blank" rel="noreferrer">Spartasoft Studio</a>. My internship experience at <a href="https://www.westmonroe.com/" target="_blank" rel="noreferrer">West Monroe Partners</a> gave me further experience with full-stack development including React/Node/PostGreSQL. I am always eager to learn and willing to dive into new opportunities!</MainHeader>
+                <MainHeader>During my time at MSU, I was involved in several organizations based around development and was even able to serve as programming director on a student-run group I helped create, <a href="https://spartasoftstudio.itch.io/" target="_blank" rel="noreferrer">Spartasoft Studio</a>. My internship experience at <a href="https://www.westmonroe.com/" target="_blank" rel="noreferrer">West Monroe Partners</a> gave me further experience with full-stack development including React/Node/PostgreSQL. I am always eager to learn and willing to dive into new opportunities!</MainHeader>
             </DescriptionContainer>
         </AboutContainer>
     )

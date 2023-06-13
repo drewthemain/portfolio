@@ -13,8 +13,8 @@ const overviews : ProjectDescriptor[] = [
         title: "No Honor Among Thieves",
         thumbnail: "unnamed.png",
         date: "Spring 2023",
-        description: "No Honor Among Thieves was my senior capstone project where I teamed up with Chicago studio Iron Galaxy to create the guard AI for an art heist game.",
-        skills: "C#, Unity Engine, Agile Development",
+        description: "No Honor Among Thieves was a senior capstone project where I teamed with Chicago studio Iron Galaxy to create the guard AI for an art heist game.",
+        skills: "C#, AI, Unity Engine, Agile Development",
         id: "1"
     }
 ];
@@ -54,7 +54,7 @@ const projects : ProjectData[] = [
         },
         imageTwo : {
             path:"wireframe.png",
-            description:"A peek at the vision cone mesh that serves as the guard's eyes. Size is determined easily by inspector values.",
+            description:"The vision cone mesh that serves as the guard's eyes. Size is determined by inspector values.",
             alt:"wireframe in editor"
         },
         imageThree : {
